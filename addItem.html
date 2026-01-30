@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Item - Inventory Management System</title>
+    <link rel="stylesheet" href="external.css" />
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="brand">
+          <h1>IMS</h1>
+          <p>Inventory Management System</p>
+        </div>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="addItem.html" class="active">Add Item</a></li>
+            <li><a href="About.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="add-item-section">
+        <h2>Add a New Item</h2>
+        <p>Fill in the form below to add a new item to your inventory.</p>
+
+        <form id="item-form" class="form-container">
+          <!-- Text Fields -->
+          <div class="form-group">
+            <label for="itemName">Item Name *</label>
+            <input
+              id="itemName"
+              name="itemName"
+              type="text"
+              required
+              placeholder="Enter item name"
+              aria-label="Item name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="sku">SKU (Stock Keeping Unit) *</label>
+            <input
+              id="sku"
+              name="sku"
+              type="text"
+              required
+              placeholder="e.g., SKU-001"
+              aria-label="SKU"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <select
+              id="category"
+              name="category"
+              required
+              aria-label="Category"
+            >
+              <option value="">-- Select Category --</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Books">Books</option>
+              <option value="Food">Food</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              placeholder="Enter item description"
+              aria-label="Item description"
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="price">Price ($) *</label>
+              <input
+                id="price"
+                name="price"
+                type="number"
+                step="0.01"
+                required
+                placeholder="0.00"
+                aria-label="Price"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Quantity *</label>
+              <input
+                id="quantity"
+                name="quantity"
+                type="number"
+                required
+                placeholder="0"
+                aria-label="Quantity"
+              />
+            </div>
+          </div>
+
+          <!-- Radio Buttons -->
+          <fieldset class="form-group">
+            <legend>Stock Status</legend>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="status" value="in_stock" required />
+                In Stock
+              </label>
+              <label>
+                <input type="radio" name="status" value="low_stock" /> Low Stock
+              </label>
+              <label>
+                <input type="radio" name="status" value="out_of_stock" /> Out of
+                Stock
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Checkboxes -->
+          <fieldset class="form-group">
+            <legend>Item Flags</legend>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="flags" value="fragile" /> Fragile
+              </label>
+              <label>
+                <input type="checkbox" name="flags" value="taxable" /> Taxable
+              </label>
+              <label>
+                <input type="checkbox" name="flags" value="onsale" /> On Sale
+              </label>
+              <label>
+                <input type="checkbox" name="flags" value="bestseller" /> Best
+                Seller
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Image Upload -->
+          <div class="form-group">
+            <label for="image">Product Image</label>
+            <input
+              id="image"
+              name="image"
+              type="file"
+              accept="image/*"
+              aria-label="Product image"
+            />
+            <small>Upload a product image (PNG, JPG, JPEG)</small>
+            <div id="image-preview" class="image-preview"></div>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save Item</button>
+            <button type="reset" class="btn btn-secondary">Clear Form</button>
+            <a href="inventory.html" class="btn btn-tertiary">Cancel</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2026 Inventory Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

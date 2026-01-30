@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - Inventory Management System</title>
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand">
+                <h1>IMS</h1>
+                <p>Inventory Management System</p>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="inventory.html" class="active">Inventory</a></li>
+                    <li><a href="addItem.html">Add Item</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <section class="inventory-section">
+            <div class="section-header">
+                <h2>Inventory Items</h2>
+                <a href="addItem.html" class="btn btn-secondary">+ Add New Item</a>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="filter-section">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    class="search-box" 
+                    placeholder="Search items by name, SKU, or category..."
+                    aria-label="Search inventory items"
+                >
+                <select id="category-filter" class="filter-select" aria-label="Filter by category">
+                    <option value="">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Books">Books</option>
+                    <option value="Food">Food</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Inventory Table -->
+            <div class="table-wrapper">
+                <table class="inventory-table" id="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>SKU</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-body">
+                        <tr class="empty-state">
+                            <td colspan="8">No items found. <a href="addItem.html">Add your first item</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Summary -->
+            <div class="inventory-summary">
+                <p><strong>Total Items:</strong> <span id="summary-total">0</span></p>
+                <p><strong>Total Value:</strong> $<span id="summary-value">0.00</span></p>
+                <p><strong>Items in Stock:</strong> <span id="summary-in-stock">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Inventory Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+  <footer class="site-footer">
+    <small>© 2026 IMS Demo</small>
+  </footer>
+</body>
+</html>

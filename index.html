@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management System - Home</title>
+    <link rel="stylesheet" href="external.css" />
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="brand">
+          <h1>IMS</h1>
+          <p>Inventory Management System</p>
+        </div>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="addItem.html">Add Item</a></li>
+            <li><a href="About.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <section class="hero">
+        <h2>Welcome to IMS</h2>
+        <p>
+          Manage your inventory efficiently with our Inventory Management
+          System. Track products, update stock, and keep everything organized.
+        </p>
+        <a href="addItem.html" class="btn btn-primary">Add Your First Item</a>
+      </section>
+
+      <!-- Featured Image Section -->
+      <section class="featured-section">
+        <div class="featured-card">
+          <div class="image-wrapper">
+            <img
+              src="images/ProjectPP.jpg"
+              alt="Sample product image"
+              class="featured-image"
+            />
+            <span class="badge">In Stock</span>
+          </div>
+          <div class="card-content">
+            <h3>Sample Product</h3>
+            <p>
+              This demonstrates how images, badges, and product information are
+              displayed in the system.
+            </p>
+            <p>
+              <strong>Features:</strong> Border styling, padding, margin, and
+              positioned badges
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Stats -->
+      <section class="stats-section">
+        <h3>Quick Statistics</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h4>Total Items</h4>
+            <p id="total-items" class="stat-number">0</p>
+          </div>
+          <div class="stat-card">
+            <h4>In Stock</h4>
+            <p id="items-in-stock" class="stat-number">0</p>
+          </div>
+          <div class="stat-card">
+            <h4>Low Stock</h4>
+            <p id="low-stock-items" class="stat-number">0</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Information Links -->
+      <section class="info-section">
+        <h3>Getting Started</h3>
+        <ul class="info-links">
+          <li><a href="addItem.html">➕ Add a New Item to Inventory</a></li>
+          <li><a href="inventory.html">📋 View All Items</a></li>
+          <li><a href="About.html">ℹ️ Learn More About IMS</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2026 Inventory Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
