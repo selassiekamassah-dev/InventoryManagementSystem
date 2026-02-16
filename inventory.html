@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory - StockFlow</title>
+    <link rel="stylesheet" href="external.css" />
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="brand">
+          <h1>StockFlow</h1>
+          <p>Professional Inventory Management</p>
+        </div>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inventory.html" class="active">Inventory</a></li>
+            <li><a href="addItem.html">Add Item</a></li>
+            <li><a href="About.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="inventory-section">
+        <div class="section-header">
+          <h2>Your Product Inventory</h2>
+          <a href="addItem.html" class="btn btn-secondary"
+            >+ Register New Product</a
+          >
+        </div>
+
+        <p style="margin-bottom: 2rem; color: #555; font-size: 1.05em">
+          View and manage all your registered products. The table below displays
+          complete inventory information including stock levels, pricing, and
+          product status. This real-time view helps you make informed business
+          decisions.
+        </p>
+
+        <!-- Inventory Table with Sample Data -->
+        <div class="table-wrapper">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>Product Image</th>
+                <th>Name</th>
+                <th>SKU</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="images/MacbookPro.jpg" alt="Laptop" /></td>
+                <td>Macbook Pro</td>
+                <td>SKU-001</td>
+                <td>Electronics</td>
+                <td>$999.99</td>
+                <td>5</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/WirelessMouse.jpg" alt="Mouse" /></td>
+                <td>Wireless Mouse</td>
+                <td>SKU-002</td>
+                <td>Electronics</td>
+                <td>$29.99</td>
+                <td>15</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="images/MechKeyboard.jpg" alt="Keyboard" />
+                </td>
+                <td>Mechanical Keyboard</td>
+                <td>SKU-003</td>
+                <td>Electronics</td>
+                <td>$79.99</td>
+                <td>8</td>
+                <td>
+                  <span class="status-badge status-low-stock">Low Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/4KMonitor.jpg" alt="Monitor" /></td>
+                <td>4K Monitor</td>
+                <td>SKU-004</td>
+                <td>Electronics</td>
+                <td>$399.99</td>
+                <td>3</td>
+                <td>
+                  <span class="status-badge status-low-stock">Low Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="images/WirelessHeadphone.jpg" alt="Headphones" />
+                </td>
+                <td>Wireless Headphones</td>
+                <td>SKU-005</td>
+                <td>Electronics</td>
+                <td>$149.99</td>
+                <td>12</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/HardDrive.jpg" alt="External HDD" /></td>
+                <td>External Hard Drive 2TB</td>
+                <td>SKU-006</td>
+                <td>Electronics</td>
+                <td>$89.99</td>
+                <td>7</td>
+                <td>
+                  <span class="status-badge status-low-stock">Low Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/USBTypeC.jpg" alt="USB Cable" /></td>
+                <td>USB Type-C Cable</td>
+                <td>SKU-007</td>
+                <td>Electronics</td>
+                <td>$12.99</td>
+                <td>45</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/Webcam.jpg" alt="Webcam" /></td>
+                <td>4K Webcam</td>
+                <td>SKU-008</td>
+                <td>Electronics</td>
+                <td>$119.99</td>
+                <td>6</td>
+                <td>
+                  <span class="status-badge status-low-stock">Low Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="images/FastAdapter.jpg" alt="Phone Charger" />
+                </td>
+                <td>Fast Charging Adapter</td>
+                <td>SKU-009</td>
+                <td>Electronics</td>
+                <td>$34.99</td>
+                <td>28</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/LaptopStand.jpg" alt="Laptop Stand" /></td>
+                <td>Adjustable Laptop Stand</td>
+                <td>SKU-010</td>
+                <td>Electronics</td>
+                <td>$44.99</td>
+                <td>0</td>
+                <td>
+                  <span class="status-badge status-out-of-stock"
+                    >Out of Stock</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/MonitorMount.jpg" alt="Monitor Arm" /></td>
+                <td>Monitor Arm Mount</td>
+                <td>SKU-011</td>
+                <td>Electronics</td>
+                <td>$59.99</td>
+                <td>9</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="images/DockingStation.jpg" alt="Docking Station" />
+                </td>
+                <td>USB-C Docking Station</td>
+                <td>SKU-012</td>
+                <td>Electronics</td>
+                <td>$129.99</td>
+                <td>4</td>
+                <td>
+                  <span class="status-badge status-low-stock">Low Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/NVMe.jpg" alt="SSD" /></td>
+                <td>NVMe SSD 1TB</td>
+                <td>SKU-013</td>
+                <td>Electronics</td>
+                <td>$99.99</td>
+                <td>14</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/CoolingPad.jpg" alt="Cooling Fan" /></td>
+                <td>Laptop Cooling Pad</td>
+                <td>SKU-014</td>
+                <td>Electronics</td>
+                <td>$24.99</td>
+                <td>22</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/WfiRouter.jpg" alt="Router" /></td>
+                <td>WiFi 6 Router</td>
+                <td>SKU-015</td>
+                <td>Electronics</td>
+                <td>$179.99</td>
+                <td>2</td>
+                <td>
+                  <span class="status-badge status-low-stock">Low Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/USBPort.jpg" alt="Hub" /></td>
+                <td>USB 3.0 Hub 7-Port</td>
+                <td>SKU-016</td>
+                <td>Electronics</td>
+                <td>$39.99</td>
+                <td>11</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/HDMICable.jpg" alt="HDMI Cable" /></td>
+                <td>HDMI 2.1 Cable</td>
+                <td>SKU-017</td>
+                <td>Electronics</td>
+                <td>$19.99</td>
+                <td>35</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/PowerSupply.jpg" alt="Power Supply" /></td>
+                <td>Desktop Power Supply 650W</td>
+                <td>SKU-018</td>
+                <td>Electronics</td>
+                <td>$74.99</td>
+                <td>5</td>
+                <td>
+                  <span class="status-badge status-low-stock">Low Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/DDRM4.jpg" alt="RAM" /></td>
+                <td>DDR4 RAM 16GB</td>
+                <td>SKU-019</td>
+                <td>Electronics</td>
+                <td>$79.99</td>
+                <td>8</td>
+                <td>
+                  <span class="status-badge status-in-stock">In Stock</span>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="images/CondenserMic.jpg" alt="Microphone" /></td>
+                <td>USB Condenser Microphone</td>
+                <td>SKU-020</td>
+                <td>Electronics</td>
+                <td>$59.99</td>
+                <td>0</td>
+                <td>
+                  <span class="status-badge status-out-of-stock"
+                    >Out of Stock</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Summary -->
+        <div class="inventory-summary">
+          <h3>Inventory Summary</h3>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <span class="summary-label">Total Products</span>
+              <span class="summary-value">20</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Total Quantity</span>
+              <span class="summary-value">239 units</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">In Stock</span>
+              <span class="summary-value">18 products</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Low Stock Alert</span>
+              <span class="summary-value">9 products</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 StockFlow. All rights reserved. | Professional Inventory
+        Management Solutions
+      </p>
+    </footer>
+  </body>
+</html>
